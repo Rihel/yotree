@@ -1,0 +1,113 @@
+@import "mixin",'grid';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  font: inherit;
+  font-family: "helvetica neue",arial,sans-serif;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #222;
+  &:hover{
+    text-decoration: none;
+  }
+  &:active{
+    color: #222;
+  }
+  &:visited{
+    color: #222;
+  }
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input:focus{
+  outline: none;
+}
+$dir:(left:ml,right:mr,bottom:mb,top:mt);
+@for $i from 1 through 10{
+  @each $key,$value in $dir{
+    .#{$value}#{$i}{
+      margin-#{$key}:$i*10px;
+    }
+  }
+}
+.container{
+  width: 1200px;
+  @include blockCenter;
+}
+.clearfix{
+  @include clearfix;
+}
+@each $key,$value in $animateName{
+  .items-#{$key}{
+    @include animateTransition($value,1s);
+  }
+}
+@include keyframs(round){
+  0%{
+    @include transform(rotate(0deg));
+  }
+  //50%{
+  //  @include transform(rotate(180deg));
+  //}
+  100%{
+    @include transform(rotate(359deg));
+  }
+}
+@include keyframs(yaobao){
+  0%{
+    @include transform(rotate(-25deg));
+  }
+  25%{
+    @include transform(rotate(0deg))
+  }
+  50%{
+    @include transform(rotate(25deg))
+  }
+  75%{
+    @include transform(rotate(0deg))
+  }
+  100%{
+    @include transform(rotate(-25deg));
+  }
+}

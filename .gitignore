@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/modules.xml
+.idea/workspace.xml
+.idea/yotree.iml
+node_modules/
+.DS_Store/
