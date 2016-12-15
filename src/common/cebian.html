@@ -1,0 +1,64 @@
+<ul class="cebian">
+    <li class="qq">
+        <i class="fa fa-qq"></i>
+        <div class="info">客服QQ</div>
+        <div class="mesg">
+            <p ><a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=896234087&website=www.oicqzone.com"><img
+                    src="../img/QQ.png" alt=""></a></p>
+            <p>点击qq联系我们</p>
+            <p>QQ:896234087</p>
+            <p>先就业一年后付款</p>
+        </div>
+    </li>
+    <li class="phone">
+        <i class="fa fa-phone"></i>
+        <div class="info">电话咨询</div>
+        <div class="mesg">
+            <h2 >电话咨询</h2>
+            <p>020-37209280</p>
+            <p>020-37209286</p>
+            <p>24小时电话：18127873532</p>
+            <p>先就业一年后付款</p>
+        </div>
+    </li>
+    <li class="weixin" >
+        <i class="fa fa-wechat"></i>
+        <div class="info">微信咨询</div>
+        <div class="mesg">
+            <h2>微信咨询</h2>
+            <img src="../img/weixin.jpg" alt="">
+            <p>微信同号：18127873532</p>
+            <p>先就业一年后付款</p>
+        </div>
+    </li>
+    <li class="jy">
+        <i class="fa fa-money"></i>
+        <div class="info">付款方式</div>
+        <div class="mesg">
+            <img src="img/logo.png" alt="" style="width: 80%;">
+            <h2>先就业后付款</h2>
+            <p style="font-size: 2em">挑战年薪 30万</p>
+
+        </div>
+    </li>
+
+    <li class="gotop">
+        <i class="fa fa-angle-up"></i>
+        <div class="info">返回顶部</div>
+    </li>
+</ul>
+<script>
+    $('.gotop').click(function(){
+        $('body,html').animate({
+            scrollTop:0
+        })
+    });
+    $('.cebian').find('.mesg').css({
+        position:'fixed',top:'50%','marginTop':'-249px'
+    })
+    $('ul li').hover(function(){
+        $(this).find('.mesg').stop().animate({right:'50px'});
+    },function(){
+        $(this).find('.mesg').stop().animate({right:'-240px'});
+    })
+</script>

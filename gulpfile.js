@@ -14,36 +14,36 @@ var gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	htmlmin=require('gulp-htmlmin');
 //html
-gulp.task('html',function(){
-	return gulp.src('src/**/**.html')
+gulp.task('common',function(){
+	return gulp.src('src/common/**.html')
 			   .pipe(htmlmin({
 				   collapseWhitespace: true,
 				   minifyJS: true,//压缩页面JS
 				   minifyCSS: true//压缩页面CSS
 			   }))
-			   .pipe(gulp.dest('dist/'))
+			   .pipe(gulp.dest('dist/common'))
 			   .pipe(notify({ message: 'common task complete' }));
 })
 // 样式
 gulp.task('styles', function() {
-	return gulp.src('src/css/*.css')
+	return gulp.src('src/newcss/*.css')
 			   .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 			   .pipe(gulp.dest('dist/newcss'))
 			   .pipe(minifycss())
-			   .pipe(gulp.dest('dist/css'))
+			   .pipe(gulp.dest('dist/newcss'))
 			   .pipe(notify({ message: 'Styles task complete' }));
 });
 
 // 脚本
 gulp.task('scripts', function() {
-	return gulp.src('src/js/*.js')
+	return gulp.src('src/newjs/*.js')
 			   // .pipe(jshint('.jshintrc'))
 			   // .pipe(jshint.reporter('default'))
-			   // .pipe(concat('main.js'))
+			   // .pipe(concat('main.newjs'))
 			   // .pipe(gulp.dest('dist/scripts'))
 			   // .pipe(rename({ suffix: '.min' }))
 			   .pipe(uglify())
-			   .pipe(gulp.dest('dist/s'))
+			   .pipe(gulp.dest('dist/newjs'))
 			   .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -57,23 +57,23 @@ gulp.task('images', function() {
 
 // 清理
 gulp.task('clean', function() {
-	return gulp.src(['dist/css', 'dist/js'], {read: false})
+	return gulp.src(['dist/newcss', 'dist/newjs','dist/common'], {read: false})
 			   .pipe(clean());
 });
 
 // 预设任务
 gulp.task('default', ['clean'],function() {
-	gulp.start('styles', 'scripts','html');
+	gulp.start('styles', 'scripts','common','images');
 });
 
 // 看手
 gulp.task('watch', function() {
 
 	// 看守所有.scss档
-	gulp.watch('src/css/*.css', ['styles']);
+	gulp.watch('src/newcss/*.css', ['styles']);
 
 	// 看守所有.js档
-	gulp.watch('src/js/*.js', ['scripts']);
+	gulp.watch('src/newjs/*.js', ['scripts']);
 
 	gulp.watch('src/**/**.html', ['html']);
 

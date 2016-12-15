@@ -106,7 +106,7 @@ $animateName:(
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
 }
-@mixin transition($num){
+@mixin transition($num...){
   @include css3(transition,$num)
 }
 @mixin css3($property, $value) {
@@ -222,6 +222,8 @@ $animateName:(
     &.active{
       @include scale(1);
     }
+  }@else if $type==fadeIn{
+
   }
 }
 
@@ -239,7 +241,10 @@ $animateName:(
   }
 
 }
-
+@mixin textshadow{
+  text-shadow: 0 0 2px #c7c7c7;
+  color: #000;
+}
 
 
 @mixin rotate3d($num...){
