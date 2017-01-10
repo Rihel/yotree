@@ -45,6 +45,7 @@ ol, ul {
   list-style: none;
 }
 
+
 a {
   text-decoration: none;
   color: #222;
@@ -218,7 +219,7 @@ $pdir: (left:pl, right:pr, bottom:pb, top:pt);
   background-color:#e9e9e9;
   .youshi-inner{
     width:1200px;
-    text-align:center;
+
     padding-bottom:65px;
     height:450px;
     margin:0 auto;
@@ -241,14 +242,14 @@ $pdir: (left:pl, right:pr, bottom:pb, top:pt);
     }
     .youshi-box{
       width:1140px;
-      text-align:center;
+
       height:135px;
       position:relative;
       padding:0 30px;
       border-bottom:1px #a8a8a8 solid;
       .youshi-box-a {
         width:135px;
-        text-align:center;
+
 
         float: left;
         margin:59px 75px;
@@ -266,6 +267,7 @@ $pdir: (left:pl, right:pr, bottom:pb, top:pt);
           border-radius:135px;
           background-color:#fb6707;
           transition:0.3s;
+          text-align:center;
           &:hover{
             background-image:radial-gradient(at 35px 35px,#ff3434,#c82736,#ff3434);
             box-shadow:2px 2px 2px #ccc;
@@ -275,7 +277,8 @@ $pdir: (left:pl, right:pr, bottom:pb, top:pt);
           color:#fb6808;
           font-size:18PX;
           font-weight:300;
-          padding-top:5px;
+          padding-top:15px;
+          text-indent: 32px;
         }
         .youshi-box-a-b{
           background-color:#0180f3;
@@ -968,16 +971,17 @@ $bannerHeight:469px;
       background: {
         repeat: no-repeat;
         position: center;
-        size: cover;
+
       };
     }
     @for $i from 1 through 5{
       .item#{$i}{
         background:#00ccff url("../img/banner#{$i}.jpg") no-repeat center;
+
       }
     }
     .item1{
-      background: url("../img/banner1.jpg");
+      background: url("../img/banner1.jpg") no-repeat center;
     }
     .carousel-indicators{
       li{
@@ -1398,4 +1402,44 @@ footer {
       }
     }
   }
+}
+
+.plane1{
+  .youtree-title{
+    font-size: 48px;
+  }
+  .youtree-p{
+    font-size: 18px;
+    text-indent: 238px;
+    a{
+      color: red;
+    }
+  }
+}
+.plane4{
+  background-color: #000;
+
+  .container{
+    padding-top: 30px;
+    background-image: url("../img/plane4-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 0 ;
+    h2{
+      font-size: 44px;
+      color: #fff;
+      padding-top: 43px;
+      text-indent: 640px;
+      background: {
+        image: url("../img/whire-logo.png");
+        repeat: no-repeat;
+        position: 0 0;
+      };
+    }
+    img{
+      width: 1043px;
+      @include blockCenter;
+      display: block;
+    }
+  }
+
 }

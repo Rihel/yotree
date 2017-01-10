@@ -78,6 +78,7 @@
       line-height: 30px;
       text-align: center;
       border: 1px solid #2b88ff; }
+
 .jz-item .jz-item-bottom {
   width: 997px;
   height: 499px;
@@ -158,6 +159,7 @@
       text-align: center;
       border: 1px solid #ff900d;
       color: #FFFFFF; }
+
 .jz-item2 .jz-item-bottom {
   width: 997px;
   height: 499px;
@@ -252,5 +254,3 @@
           outline: none;
           box-shadow: 0 0 5px #00c1de;
           border: 1px solid #00c1de; }
-
-/*# sourceMappingURL=jz.css.map */

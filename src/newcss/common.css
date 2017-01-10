@@ -1108,7 +1108,6 @@ iframe {
   background-color: #e9e9e9; }
   .youshi .youshi-inner {
     width: 1200px;
-    text-align: center;
     padding-bottom: 65px;
     height: 450px;
     margin: 0 auto; }
@@ -1127,14 +1126,12 @@ iframe {
       color: #49494b; }
     .youshi .youshi-inner .youshi-box {
       width: 1140px;
-      text-align: center;
       height: 135px;
       position: relative;
       padding: 0 30px;
       border-bottom: 1px #a8a8a8 solid; }
       .youshi .youshi-inner .youshi-box .youshi-box-a {
         width: 135px;
-        text-align: center;
         float: left;
         margin: 59px 75px; }
         .youshi .youshi-inner .youshi-box .youshi-box-a.clear-mr {
@@ -1149,7 +1146,8 @@ iframe {
           border: 8px #efb590 solid;
           border-radius: 135px;
           background-color: #fb6707;
-          transition: 0.3s; }
+          transition: 0.3s;
+          text-align: center; }
           .youshi .youshi-inner .youshi-box .youshi-box-a h5:hover {
             background-image: radial-gradient(at 35px 35px, #ff3434, #c82736, #ff3434);
             box-shadow: 2px 2px 2px #ccc; }
@@ -1157,7 +1155,8 @@ iframe {
           color: #fb6808;
           font-size: 18PX;
           font-weight: 300;
-          padding-top: 5px; }
+          padding-top: 15px;
+          text-indent: 32px; }
         .youshi .youshi-inner .youshi-box .youshi-box-a .youshi-box-a-b {
           background-color: #0180f3;
           position: relative;
@@ -1192,7 +1191,7 @@ iframe {
   display: none;
   -webkit-transition: .6s ease-in-out left;
   -o-transition: .6s ease-in-out left;
-  transition: 0.6s ease-in-out left; }
+  transition: .6s ease-in-out left; }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   line-height: 1; }
@@ -1206,21 +1205,19 @@ iframe {
     backface-visibility: hidden;
     -webkit-perspective: 1000px;
     perspective: 1000px; }
-
   .carousel-inner > .item.next, .carousel-inner > .item.active.right {
     left: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0); }
-
   .carousel-inner > .item.prev, .carousel-inner > .item.active.left {
     left: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }
-
   .carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item.active {
     left: 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
+
 .carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
   display: block; }
 
@@ -1258,7 +1255,7 @@ iframe {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   filter: alpha(opacity=50);
-  opacity: 0.5; }
+  opacity: .5; }
 
 .carousel-control.left {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
@@ -1283,7 +1280,7 @@ iframe {
   text-decoration: none;
   filter: alpha(opacity=90);
   outline: 0;
-  opacity: 0.9; }
+  opacity: .9; }
 
 .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
   position: absolute;
@@ -1306,10 +1303,10 @@ iframe {
   font-family: serif; }
 
 .carousel-control .icon-prev:before {
-  content: "‹"; }
+  content: '\2039'; }
 
 .carousel-control .icon-next:before {
-  content: "›"; }
+  content: '\203a'; }
 
 .carousel-indicators {
   position: absolute;
@@ -1460,24 +1457,19 @@ table td[class*=col-], table th[class*=col-] {
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd; }
-
   .table-responsive > .table {
     margin-bottom: 0; }
-
   .table-responsive > .table > thead > tr > th, .table-responsive > .table > tbody > tr > th, .table-responsive > .table > tfoot > tr > th, .table-responsive > .table > thead > tr > td, .table-responsive > .table > tbody > tr > td, .table-responsive > .table > tfoot > tr > td {
     white-space: nowrap; }
-
   .table-responsive > .table-bordered {
     border: 0; }
-
   .table-responsive > .table-bordered > thead > tr > th:first-child, .table-responsive > .table-bordered > tbody > tr > th:first-child, .table-responsive > .table-bordered > tfoot > tr > th:first-child, .table-responsive > .table-bordered > thead > tr > td:first-child, .table-responsive > .table-bordered > tbody > tr > td:first-child, .table-responsive > .table-bordered > tfoot > tr > td:first-child {
     border-left: 0; }
-
   .table-responsive > .table-bordered > thead > tr > th:last-child, .table-responsive > .table-bordered > tbody > tr > th:last-child, .table-responsive > .table-bordered > tfoot > tr > th:last-child, .table-responsive > .table-bordered > thead > tr > td:last-child, .table-responsive > .table-bordered > tbody > tr > td:last-child, .table-responsive > .table-bordered > tfoot > tr > td:last-child {
     border-right: 0; }
-
   .table-responsive > .table-bordered > tbody > tr:last-child > th, .table-responsive > .table-bordered > tfoot > tr:last-child > th, .table-responsive > .table-bordered > tbody > tr:last-child > td, .table-responsive > .table-bordered > tfoot > tr:last-child > td {
     border-bottom: 0; } }
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -1610,6 +1602,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(359deg);
     -o-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @-webkit-keyframes round {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1623,6 +1616,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(359deg);
     -o-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @-ms-keyframes round {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1636,6 +1630,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(359deg);
     -o-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @-o-keyframes round {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1649,6 +1644,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(359deg);
     -o-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @keyframes round {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1662,6 +1658,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(359deg);
     -o-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @-moz-keyframes yaobao {
   0% {
     -webkit-transform: rotate(-25deg);
@@ -1693,6 +1690,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(-25deg);
     -o-transform: rotate(-25deg);
     transform: rotate(-25deg); } }
+
 @-webkit-keyframes yaobao {
   0% {
     -webkit-transform: rotate(-25deg);
@@ -1724,6 +1722,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(-25deg);
     -o-transform: rotate(-25deg);
     transform: rotate(-25deg); } }
+
 @-ms-keyframes yaobao {
   0% {
     -webkit-transform: rotate(-25deg);
@@ -1755,6 +1754,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(-25deg);
     -o-transform: rotate(-25deg);
     transform: rotate(-25deg); } }
+
 @-o-keyframes yaobao {
   0% {
     -webkit-transform: rotate(-25deg);
@@ -1786,6 +1786,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(-25deg);
     -o-transform: rotate(-25deg);
     transform: rotate(-25deg); } }
+
 @keyframes yaobao {
   0% {
     -webkit-transform: rotate(-25deg);
@@ -1817,6 +1818,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: rotate(-25deg);
     -o-transform: rotate(-25deg);
     transform: rotate(-25deg); } }
+
 @-moz-keyframes updown {
   0% {
     -webkit-transform: translate(0, 0) scaleY(1);
@@ -1836,6 +1838,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: translate(0, 0) scaleY(1);
     -o-transform: translate(0, 0) scaleY(1);
     transform: translate(0, 0) scaleY(1); } }
+
 @-webkit-keyframes updown {
   0% {
     -webkit-transform: translate(0, 0) scaleY(1);
@@ -1855,6 +1858,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: translate(0, 0) scaleY(1);
     -o-transform: translate(0, 0) scaleY(1);
     transform: translate(0, 0) scaleY(1); } }
+
 @-ms-keyframes updown {
   0% {
     -webkit-transform: translate(0, 0) scaleY(1);
@@ -1874,6 +1878,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: translate(0, 0) scaleY(1);
     -o-transform: translate(0, 0) scaleY(1);
     transform: translate(0, 0) scaleY(1); } }
+
 @-o-keyframes updown {
   0% {
     -webkit-transform: translate(0, 0) scaleY(1);
@@ -1893,6 +1898,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: translate(0, 0) scaleY(1);
     -o-transform: translate(0, 0) scaleY(1);
     transform: translate(0, 0) scaleY(1); } }
+
 @keyframes updown {
   0% {
     -webkit-transform: translate(0, 0) scaleY(1);
@@ -1912,6 +1918,7 @@ table td[class*=col-], table th[class*=col-] {
     -ms-transform: translate(0, 0) scaleY(1);
     -o-transform: translate(0, 0) scaleY(1);
     transform: translate(0, 0) scaleY(1); } }
+
 .updown {
   -webkit-animation: updown 1s infinite;
   -moz-animation: updown 1s infinite;
@@ -2139,8 +2146,7 @@ table td[class*=col-], table th[class*=col-] {
     .banner .slide .item {
       height: 469px;
       background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover; }
+      background-position: center; }
     .banner .slide .item1 {
       background: #00ccff url("../img/banner1.jpg") no-repeat center; }
     .banner .slide .item2 {
@@ -2152,7 +2158,7 @@ table td[class*=col-], table th[class*=col-] {
     .banner .slide .item5 {
       background: #00ccff url("../img/banner5.jpg") no-repeat center; }
     .banner .slide .item1 {
-      background: url("../img/banner1.jpg"); }
+      background: url("../img/banner1.jpg") no-repeat center; }
     .banner .slide .carousel-indicators li {
       *float: left;
       *margin-right: 10px; }
@@ -2514,4 +2520,32 @@ footer {
         .y-row .card-area .card-item.active .card-content .secend-show {
           display: block; }
 
-/*# sourceMappingURL=common.css.map */
+.plane1 .youtree-title {
+  font-size: 48px; }
+
+.plane1 .youtree-p {
+  font-size: 18px;
+  text-indent: 238px; }
+  .plane1 .youtree-p a {
+    color: red; }
+
+.plane4 {
+  background-color: #000; }
+  .plane4 .container {
+    padding-top: 30px;
+    background-image: url("../img/plane4-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 0; }
+    .plane4 .container h2 {
+      font-size: 44px;
+      color: #fff;
+      padding-top: 43px;
+      text-indent: 640px;
+      background-image: url("../img/whire-logo.png");
+      background-repeat: no-repeat;
+      background-position: 0 0; }
+    .plane4 .container img {
+      width: 1043px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block; }
