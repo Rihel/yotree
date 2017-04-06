@@ -1,0 +1,35 @@
+.kecheng h2 {
+  padding: 30px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold; }
+
+.kecheng table {
+  width: 100%;
+  background: #b4b4b4;
+  margin-bottom: 50px; }
+  .kecheng table .table-title {
+    padding: 20px;
+    height: 50px;
+    line-height: 50px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 24px; }
+    .kecheng table .table-title td {
+      border: none; }
+  .kecheng table .table-title-2 {
+    background: #3893ef;
+    color: #000; }
+  .kecheng table thead td {
+    text-align: center; }
+  .kecheng table tr td {
+    vertical-align: middle;
+    padding: 20px 0;
+    border: 1px solid #eee; }
+  .kecheng table tbody tr td:nth-of-type(1), .kecheng table tbody tr td:nth-of-type(2) {
+    width: 300px;
+    text-align: center; }
+  .kecheng table tbody tr td:nth-of-type(3) {
+    padding-left: 30px;
+    line-height: 20px; }
