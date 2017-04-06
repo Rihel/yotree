@@ -1,0 +1,215 @@
+.main .section1 {
+  text-align: center;
+  margin-top: 24px; }
+  .main .section1 h1 {
+    font-size: 22px;
+    color: #ff5a0c; }
+  .main .section1 .gokebiao {
+    font-size: 16px;
+    margin: 20px 0; }
+    .main .section1 .gokebiao a {
+      color: #ff5a0c; }
+  .main .section1 p:nth-of-type(2) {
+    font-size: 16px;
+    color: #585858;
+    margin-bottom: 12px; }
+  .main .section1 p:nth-of-type(3) {
+    font-size: 14px;
+    margin-bottom: 8px; }
+    .main .section1 p:nth-of-type(3) span {
+      color: #ff5a0c; }
+  .main .section1 p:nth-of-type(4) {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 28px;
+    text-indent: 2em;
+    font-size: 16px;
+    text-align: left; }
+  .main .section1 h3 {
+    font-size: 14px;
+    margin-bottom: 8px; }
+  .main .section1 small {
+    font-size: 12px;
+    margin-bottom: 44px;
+    display: block; }
+  .main .section1 h2 {
+    font-size: 18px;
+    color: #ff5a0c; }
+  .main .section1 img.bintu {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 38px auto 24px; }
+  .main .section1 ul {
+    width: 90%;
+    padding: 0 5% 0;
+    margin-top: 0.5rem; }
+    .main .section1 ul:before, .main .section1 ul:after {
+      content: "";
+      display: table; }
+    .main .section1 ul:after {
+      clear: both;
+      overflow: hidden; }
+    .main .section1 ul li {
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      padding: 0.1rem;
+      margin-bottom: 10px; }
+      .main .section1 ul li img {
+        display: block;
+        width: 100%;
+        height: auto; }
+.main .section2 {
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem; }
+  .main .section2 img {
+    display: block;
+    height: auto;
+    width: 100%; }
+  .main .section2 h2 {
+    font-size: 18px;
+    color: #ff5a0c;
+    text-align: center;
+    margin: 1rem 0; }
+  .main .section2 ul {
+    width: 100%; }
+    .main .section2 ul li {
+      width: 100%;
+      height: 2rem;
+      box-sizing: border-box;
+      margin-top: 20px;
+      padding-left: 3rem;
+      border-radius: 5px;
+      padding-right: 0.5rem;
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 0.2rem;
+      background-color: #a9e6de;
+      background-repeat: no-repeat;
+      background-image: url(../images/jieduan.png);
+      background-position-x: 0;
+      background-size: 19%; }
+      .main .section2 ul li:nth-of-type(2) {
+        background-position-y: 25%; }
+      .main .section2 ul li:nth-of-type(3) {
+        background-position-y: 50%; }
+      .main .section2 ul li:nth-of-type(4) {
+        background-position-y: 75%; }
+      .main .section2 ul li:nth-of-type(5) {
+        background-position-y: 100%; }
+.main .section3 h2 {
+  color: #ff5a0c;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem; }
+.main .section3 p.long {
+  text-indent: 2em;
+  padding: 0 1rem;
+  font-size: 14px;
+  margin-bottom: 0.5rem; }
+.main .section3 img.sws {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  height: auto; }
+.main .section3 ul {
+  display: flex;
+  flex-direction: column; }
+  .main .section3 ul li {
+    flex: 1;
+    display: flex;
+    padding: 0 0.8rem;
+    margin-top: 0.5rem; }
+    .main .section3 ul li .sw-thumb {
+      flex: 3; }
+      .main .section3 ul li .sw-thumb img {
+        width: 100%;
+        display: block;
+        height: auto; }
+    .main .section3 ul li .sw-text {
+      flex: 8;
+      padding-left: 0.5rem; }
+      .main .section3 ul li .sw-text h3 {
+        color: #ff5a0c;
+        font-size: 14px;
+        margin-top: 0.5rem; }
+      .main .section3 ul li .sw-text p {
+        font-size: 12px; }
+.main .section4 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem; }
+  .main .section4 h2 {
+    color: #ff5a0c;
+    font-size: 18px;
+    text-align: center;
+    margin: 1rem 0; }
+  .main .section4 ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.5rem; }
+    .main .section4 ul li {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 0.2rem; }
+      .main .section4 ul li .thumb {
+        flex: 4; }
+        .main .section4 ul li .thumb img {
+          width: 100%;
+          display: block;
+          height: auto; }
+      .main .section4 ul li .caption {
+        flex: 2;
+        color: #585858;
+        font-size: 12px; }
+.main .classer h2 {
+  color: #5286d9;
+  text-align: center; }
+.main .classer table {
+  margin: 20px;
+  border-collapse: collapse;
+  border-spacing: 0; }
+  .main .classer table tr td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px; }
+  .main .classer table caption {
+    background: #2c2c2c;
+    text-align: center;
+    color: #ccc;
+    padding: 5px; }
+  .main .classer table thead {
+    background: #359eda; }
+    .main .classer table thead tr td:nth-of-type(1) {
+      width: 20%; }
+    .main .classer table thead tr td:nth-of-typ(2) {
+      width: 60%; }
+    .main .classer table thead tr td:nth-of-type(3) {
+      width: 20%; }
+  .main .classer table tbody {
+    background: #ccc; }
+    .main .classer table tbody tr td:nth-of-type(2), .main .classer table tbody tr td:nth-of-type(3) {
+      text-align: left; }
+  .main .classer table tfoot {
+    background: #ccc; }
+.main .classtable {
+  box-sizing: border-box; }
+  .main .classtable caption {
+    color: #fff;
+    background: #000;
+    padding: 20px 0;
+    font-size: 22px; }
+  .main .classtable tbody {
+    background: #aeaeae; }
+    .main .classtable tbody tr td {
+      border: 1px solid #ddd;
+      font-size: 14px;
+      padding: 5px; }
+
+/*# sourceMappingURL=plane.css.map */

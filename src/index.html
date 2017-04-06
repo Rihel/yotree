@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,11 +20,12 @@
     <link rel="stylesheet" href="newcss/css3animate.css" >
     <link rel="stylesheet" href="newcss/oldys.css" >
     <link rel="stylesheet" href="newcss/index.css" >
+    <link rel="stylesheet" href="newcss/bg.css">
     <script >
-        var w=window.screen.width;
+        var w = window.screen.width;
 
-        if(w<640){
-            window.location.href='wap/index.html'
+        if (w < 640) {
+            window.location.href = 'wap/index.html'
         }
     </script>
    <script src="newjs/jquery.min.js" type="text/javascript"></script>
@@ -32,6 +34,13 @@
     <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <script src="//cdn.bootcss.com/selectivizr/1.0.2/selectivizr-min.newjs"></script>
     <![endif]-->
+    <style>
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -290,10 +299,56 @@
 
            </div>
         </section>
-        <section class="uigt">
-            <div class="container">
+        <section class="uigt pt6">
+            <!--<div class=" warp items">-->
+                                <!--<div class="text-ball text-ball1">-->
+            <!--<p>UI交互设计师</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball2">-->
+            <!--<p>界面设计</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball3">-->
+            <!--<p>网站设计</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball4">-->
+            <!--<p>UE用户体验设计师</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball5">-->
+            <!--<p>PM产品经理</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball6">-->
+            <!--<p>项目经理</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball7">-->
+            <!--<p>资深专家</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball8">-->
+            <!--<p>网站架构师</p>-->
+        <!--</div>-->
+        <!--<div class="text-ball text-ball9">-->
+            <!--<p>人体交互</p>-->
+        <!--</div>-->
+        <!--<p class="bg-ball bg-ball1"></p>-->
+        <!--<p class="bg-ball bg-ball2"></p>-->
+        <!--<p class="bg-ball bg-ball3"></p>-->
+        <!--<p class="bg-ball bg-ball4"></p>-->
+        <!--<p class="bg-ball bg-ball5"></p>-->
+        <!--<p class="bg-ball bg-ball6"></p>-->
+        <!--<p class="bg-ball bg-ball7"></p>-->
+        <!--<p class="bg-ball bg-ball8"></p>-->
+        <!--<p class="bg-ball bg-ball9"></p>-->
+        <!--<p class="bg-ball bg-ball10"></p>-->
+        <!--<h3>UI</h3>-->
 
-            </div>
+            <!--</div>-->
+           <div class="warp items">
+               <div id="uigt">
+                   <!--   <svg width="1200" height="560">
+                          <path d="m200,250a150,30 0 1 0 0,70"
+                               fill="none" stroke="#000" stroke-width="1" />
+                      </svg>-->
+               </div>
+           </div>
         </section>
         <section class="hezhao">
             <div class="container">
@@ -1011,39 +1066,75 @@
                 <p>优树学院教学团队绝对是一线大咖，实战经验和教学经验丰富<br>
                     与众不同的授课方法，拒绝肤浅的视频教学，每个学员每个环节全部过关，我们不说是最好的，但绝对是最适合你的！<br>
                     精通UI每个环节，创"HTML5混合式开发"课程，150天内成为企业需要的复合UI设计与APP开发人才！</p>
-                <div class="shizi-pic">
-                    <div class="shizi-one">
-                        <div class="shizi-opic"><img asrc="img/111.png"></div>
-                        <h5>王老师</h5>
-                        <p>UI设计高级讲师</p>
-                        <p>精通Dreamweaver、MockingBot、CorelDRAW</p>
-                    </div>
-                    <div class="shizi-two">
-                        <div class="shizi-opic"><img asrc="img/222.png"></div>
-                        <h5>李老师</h5>
-                        <p>Web前端高级讲师</p>
-                        <p>精通Photoshop、Coreldraw、Illustrator</p>
-                    </div>
-                    <div class="shizi-three">
-                        <div class="shizi-tpic"><img asrc="img/333.png"></div>
-                        <h5>孙老师</h5>
-                        <p>混合式开发特级讲师</p>
-                        <p>资深教育行业领航者</p>
-                    </div>
-                    <div class="shizi-four">
-                        <div class="shizi-opic"><img asrc="img/rihel.png"></div>
-                        <h5>李老师</h5>
-                        <p>HTML5高级讲师</p>
-                        <p>开发出简洁易懂的授课新教程</p>
-                    </div>
-                    <div class="shizi-five">
-                        <div class="shizi-opic"><img asrc="img/555.png"></div>
-                        <h5>周老师</h5>
-                        <p>UI设计高级讲师</p>
-                        <p>精通整套APP开发的讲解以及流程</p>
-                    </div>
-                </div>
-                <div class="clear"></div>
+                    <section class="banner pb10" >
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item   active" style="height:600px;">
+                                    <div class="shizi-pic">
+                                        <div class="shizi-one">
+                                            <div class="shizi-opic"><img asrc="img/111.png"></div>
+                                            <h5>黄老师</h5>
+                                            <p>UI设计高级讲师</p>
+                                            <p>精通Dreamweaver、MockingBot、CorelDRAW</p>
+                                        </div>
+                                        <div class="shizi-two">
+                                            <div class="shizi-opic"><img asrc="img/222.png"></div>
+                                            <h5>李老师</h5>
+                                            <p>Web前端高级讲师</p>
+                                            <p>精通Photoshop、Coreldraw、Illustrator</p>
+                                        </div>
+                                        <div class="shizi-three">
+                                            <div class="shizi-tpic"><img asrc="img/333.png"></div>
+                                            <h5>孙老师</h5>
+                                            <p>混合式开发特级讲师</p>
+                                            <p>资深教育行业领航者</p>
+                                        </div>
+                                        <div class="shizi-four">
+                                            <div class="shizi-opic"><img asrc="img/rihel.png"></div>
+                                            <h5>李老师</h5>
+                                            <p>HTML5高级讲师</p>
+                                            <p>开发出简洁易懂的授课新教程</p>
+                                        </div>
+                                        <div class="shizi-five">
+                                            <div class="shizi-opic"><img asrc="img/555.png"></div>
+                                            <h5>周老师</h5>
+                                            <p>UI设计高级讲师</p>
+                                            <p>精通整套APP开发的讲解以及流程</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item  " style="height:600px;">
+                                     <div class="shizi-pic">
+                                        <div class="shizi-one">
+                                            <div class="shizi-opic"><img asrc="img/huang.png"></div>
+                                            <h5>黄老师</h5>
+                                            <p>UI设计高级讲师</p>
+                                            <p>精通Dreamweaver、MockingBot、CorelDRAW</p>
+                                        </div>
+                                        <div class="shizi-two">
+                                            <div class="shizi-opic"><img asrc="img/222.png"></div>
+                                            <h5>李老师</h5>
+                                            <p>Web前端高级讲师</p>
+                                            <p>精通Photoshop、Coreldraw、Illustrator</p>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            
+                            </div>
+
+
+                        </div>
+                    </section>
+               
+                <div class="clear "></div>
             </div>
         </section>
         <section class="heitiao">
@@ -1697,6 +1788,7 @@
     <script src="newjs/bootstrap.min.js"></script>
     <script src="newjs/jquery.scrollactive.js"></script>
     <script src="newjs/common.js"></script>
-
+    <script src="newjs/svg.js"></script>
+    <script src="newjs/uigt.js"></script>
 </body>
 </html>

@@ -1,0 +1,454 @@
+@import "./_mixin.scss";
+@mixin bg($size, $color) {
+    @include ball($size);
+    background-color: $color;
+    box-shadow: 0 0 10px $color;
+}
+
+@mixin heihei($name, $delay) {
+    @include animate($name 0.3s ease-in $delay 1);
+    animation-fill-mode: forwards;
+}
+
+.warp {
+    width: 1200px;
+    margin: 0 auto;
+    background: #dacbff;
+    height: 556px;
+    position: relative;
+    perspective: 2000px;
+    h3 {
+        position: absolute;
+        font-size: 120px;
+        font-weight: bold;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #f0435c;
+        text-shadow: 5px 5px 1px #c8b2cd;
+    }
+    .text-ball {
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        box-sizing: border-box;
+        display: table!important;
+        line-height: 26px;
+        transform-style: preserve-3d;
+        padding: {
+            left: 26px;
+            right: 26px;
+        }
+        text-align: center;
+        letter-spacing: 1px;
+        z-index: 2;
+        p {
+            display: table-cell;
+            vertical-align: middle;
+            transform-style: preserve-3d;
+            &:before,
+            &:after {
+                transform-style: preserve-3d;
+                width: 0!important;
+                content: '';
+                position: absolute;
+                background: #a89cc4;
+                transform-origin: left top;
+                top: 0;
+                left: 50%;
+                height: 2px;
+                box-shadow: 0 0 10px #fff;
+            }
+        }
+        &:before,
+        &:after {
+            transform-style: preserve-3d;
+            width: 0!important;
+            top: 0;
+            left: 50%;
+            height: 2px;
+            content: '';
+            position: absolute;
+            background: #a89cc4;
+            transform-origin: left top;
+            box-shadow: 0 0 10px #fff;
+        }
+        transition: all 0.5s;
+        background: #dacbff!important;
+    }
+    .bg-ball {
+        position: absolute;
+        background: #dacbff!important;
+        transform-style: preserve-3d;
+        &:before,
+        &:after {
+            transform-style: preserve-3d;
+            top: 0;
+            left: 50%;
+            height: 2px;
+            content: '';
+            position: absolute;
+            background: #a89cc4;
+            transform-origin: left top;
+            box-shadow: 0 0 10px #fff;
+            width: 0!important;
+        }
+        z-index: 4;
+    }
+    .text-ball1 {
+        @include bg(120px, #30bfa9);
+        left: 82px;
+        top: 192px;
+        &:before {
+        /*    width: 110px;*/
+            transform: translate3d(0, 0, -30px) rotate(-65deg);
+        }
+        &:after {
+   /*         width: 150px;*/
+            transform: translate3d(0, 30px, -30px) rotate(-22deg);
+        }
+        p {
+            &:after {
+              /*  width: 150px;*/
+                transform: translate3d(0, 50px, -30px) rotate(35deg);
+            }
+            &:before {
+           /*     width: 150px;*/
+                transform: translate3d(-5px, 100px, -30px) rotate(90deg);
+            }
+        }
+    }
+    .text-ball2 {
+        @include bg(96px, #e3688b);
+        left: 159px;
+        top: 19px;
+        padding: {
+            left: 26px;
+            right: 26px;
+        }
+        &:before {
+           /* width: 500px;*/
+            transform: translate3d(0, 30px, -30px) rotate(10deg);
+        }
+        &:after {
+      /*      width: 100px;*/
+            transform: translate3d(20px, 90px, -30px) rotate(49deg);
+        }
+    }
+    .text-ball3 {
+        @include bg(112px, #5f93da);
+        left: 212px;
+        top: 271px;
+        &:before {
+        /*    width: 150px;*/
+            transform: translate3d(0, 50px, -30px) rotate(-40deg);
+        }
+        &:after {
+         /*   width: 150px;*/
+            transform: translate3d(0, 60px, -30px) rotate(32deg);
+        }
+        p {
+            &:before {
+           /*     width: 150px;*/
+                transform: translate3d(-5px, 40px, -30px) rotate(-5deg);
+            }
+        }
+        z-index: 3;
+    }
+    .text-ball4 {
+        @include bg(136px, #f0435c);
+        left: 82px;
+        bottom: 5px;
+        padding: 0 10px;
+        &:before {
+           /* width: 150px;*/
+            transform: translate3d(0, 30px, -30px) rotate(-45deg);
+        }
+        &:after {
+       /*     width: 400px;*/
+            transform: translate3d(60px, 50px, -30px) rotate(-3deg);
+        }
+    }
+    .text-ball5 {
+        @include bg(132px, #3dbde3);
+        right: 184px;
+        top: 1px;
+        &:after {
+            width: 300px;
+            transform: translate3d(0, 50px, -30px) rotate(40deg);
+        }
+    }
+    .text-ball6 {
+        @include bg(116px, #d25ba1);
+        right: 340px;
+        top: 196px;
+        &:after {
+           /* width: 150px;*/
+            transform: translate3d(0, 50px, -30px) rotate(13deg);
+        }
+    }
+    .text-ball7 {
+        @include bg(118px, #90a841);
+        right: 233px;
+        bottom: 98px;
+        &:after {
+           /* width: 100px;*/
+            transform: translate3d(0, 50px, -30px) rotate(-65deg);
+        }
+    }
+    .text-ball8 {
+        @include bg(106px, #58abf0);
+        padding: 0 16px;
+        right: 35px;
+        bottom: 115px;
+        &:after {
+          /*  width: 180px;*/
+            transform: translate3d(0, 50px, -30px) rotate(-148deg);
+        }
+        &:before {
+           /* width: 142px;*/
+            transform: translate3d(0, 50px, -30px) rotate(175deg);
+        }
+    }
+    .text-ball9 {
+        @include bg(90px, #d49320);
+        padding: 15px;
+        top: 182px;
+        right: 2px;
+        &:after {
+          /*  width: 190px;*/
+            transform: translate3d(0, 50px, -30px) rotate(164deg);
+        }
+        &:before {
+           /* width: 110px;*/
+            transform: translate3d(0, 50px, -30px) rotate(105deg);
+        }
+    }
+    .bg-ball1 {
+        @include bg(26px, #dd96a7);
+        left: 266px;
+        top: 155px;
+        &:before {
+          /*  width: 100px;*/
+            transform: translate3d(0, 10px, -30px) rotate(30deg);
+        }
+        &:after {
+      /*      width: 108px;*/
+            transform: translate3d(0, 10px, -30px) rotate(95deg);
+            z-index: -1;
+        }
+    }
+    .bg-ball2 {
+        @include bg(50px, #a0a0a0);
+        top: 202px;
+        left: 356px;
+        &:before {
+            /*width: 90px;*/
+            transform: translate3d(0, 10px, -30px) rotate(70deg);
+        }
+        &:after {
+            /*width: 330px;*/
+            transform: translate3d(0, 10px, -30px) rotate(-13.5deg);
+        }
+    }
+    .bg-ball3 {
+        @include bg(12px, #b4cb50);
+        left: 406px;
+        top: 294px;
+        &:after {
+           /* width: 90px;*/
+            transform: translate3d(0, 5px, -30px) rotate(48deg);
+        }
+    }
+    .bg-ball4 {
+        @include bg(18px, #ffc699);
+        top: 402px;
+        left: 393px;
+        &:after {
+          /*  width: 80px;*/
+            transform: translate3d(0, 10px, -30px) rotate(-36deg);
+        }
+        &:before {
+          /*  width: 180px;*/
+            transform: translate3d(0, 10px, -30px) rotate(10deg);
+        }
+    }
+    .bg-ball5 {
+        @include bg(20px, #a0a0a0);
+        top: 354px;
+        left: 457px;
+        &:before {
+           /* width: 100px;*/
+            transform: translate3d(0, 10px, -30px) rotate(40deg);
+        }
+    }
+    .bg-ball6 {
+        @include bg(54px, #94d4e9);
+        left: 535px;
+        bottom: 84px;
+        &:before {
+      /*      width: 200px;*/
+            transform: translate3d(0, 35px, -30px) rotate(-18deg);
+        }
+    }
+    .bg-ball7 {
+        @include bg(14px, #a0a0a0);
+        right: 496px;
+        top: 129px;
+        &:before {
+           /* width: 100px;*/
+            transform: translate3d(0, 5px, -30px) rotate(5deg);
+        }
+    }
+    .bg-ball8 {
+        @include bg(42px, #a2e0bc);
+        right: 376px;
+        top: 122px;
+        &:before {
+          /*  width: 105px;*/
+            transform: translate3d(0, 20px, -30px) rotate(-30deg);
+        }
+        &:after {
+          /*  width: 55px;*/
+            transform: translate3d(0, 20px, -30px) rotate(92deg);
+        }
+    }
+    .bg-ball9 {
+        @include bg(30px, #ffc699);
+        right: 442px;
+        bottom: 147px;
+        &:before {
+            /*width: 100px;*/
+            transform: translate3d(0, 20px, -30px) rotate(-70deg);
+        }
+        &:after {
+         /*   width: 115px;*/
+            transform: translate3d(0, 20px, -30px) rotate(-5deg);
+        }
+    }
+    .bg-ball10 {
+        @include bg(28px, #ffc699);
+        right: 233px;
+        top: 273px;
+    }
+    &.active {
+        .text-ball {
+            @include animate(tb 1s 1 ease-in);
+            @for $i from 1 through 10 {
+                &.text-ball#{$i} {
+                    @include heihei(tb-bg#{$i}, $i*0.2s);
+                    &:after {
+                        @include heihei(tb#{$i}a, $i*0.3s);
+                    }
+                    &:before {
+                        @include heihei(tb#{$i}b, $i*0.3s);
+                    }
+                    p {
+                        &:after {
+                            @include heihei(tb#{$i}Pa, $i*0.3s);
+                        }
+                        &:before {
+                            @include heihei(tb#{$i}Pb, $i*0.3s);
+                        }
+                    }
+                }
+            }
+        }
+        .bg-ball {
+            @for $i from 1 through 10 {
+                &.bg-ball#{$i} {
+                    @include heihei(bb-bg#{$i}, $i*0.2s);
+                    &:after {
+                        @include heihei(bb#{$i}a, 2+$i*0.3s);
+                    }
+                    &:before {
+                        @include heihei(bb#{$i}b, 2+$i*0.3s);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin tbgenter($textNum) {
+    @each $item,$val in $textNum {
+        @include keyframs(#{$item}) {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: $val;
+            }
+        }
+    }
+}
+
+$tb1:( tb1a:150px, tb1b:110px, tb1Pa:150px, tb1Pb:150px);
+$tb2:( tb2a:70px, tb2b:500px);
+$tb3:( tb3a:150px, tb3b:150px, tb3Pb:150px);
+$tb4:( tb4b:150px, tb4a:370px);
+$tb5:( tb5a:300px);
+$tb6:( tb6a:150px);
+$tb7:( tb7a:100px);
+$tb8:( tb8a:180px, tb8b:142px);
+$tb9:( tb9a:190px, tb9b:110px);
+$bb1:(bb1a:108px, bb1b:100px);
+$bb2:(bb2a:330px, bb2b:90px);
+$bb3:(bb3a:90px);
+$bb4:(bb4a:80px, bb4b:180px);
+$bb5:(bb5b:100px);
+$bb6:(bb6b:200px);
+$bb7:(bb7b:100px);
+$bb8:(bb8a:55px, bb8b:105px);
+$bb9:(bb9a:115px, bb9b:100px);
+$textBall-Background-Color:( #30bfa9, #e3688b, #5f93da, #f0435c, #3dbde3, #d25ba1, #90a841, #58abf0, #d49320);
+$bgBall-Background-Color:( #dd96a7, #a0a0a0, #b4cb50, #ffc699, #a0a0a0, #94d4e9, #a0a0a0, #a2e0bc, #ffc699, #ffc699);
+@for $i from 1 through length($bgBall-Background-Color) {
+    @include keyframs(bb-bg#{$i}) {
+        0% {
+            background-color: #000;
+        }
+        100% {
+            background-color: nth($bgBall-Background-Color, $i);
+        }
+    }
+}
+
+@for $i from 1 through length($textBall-Background-Color) {
+    @include keyframs(tb-bg#{$i}) {
+        0% {
+            background-color: #000;
+        }
+        100% {
+            background-color: nth($textBall-Background-Color, $i);
+        }
+    }
+}
+
+@include keyframs(tb) {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@include tbgenter($tb1);
+@include tbgenter($tb2);
+@include tbgenter($tb3);
+@include tbgenter($tb4);
+@include tbgenter($tb5);
+@include tbgenter($tb6);
+@include tbgenter($tb7);
+@include tbgenter($tb8);
+@include tbgenter($tb9);
+@include tbgenter($bb1);
+@include tbgenter($bb2);
+@include tbgenter($bb3);
+@include tbgenter($bb4);
+@include tbgenter($bb5);
+@include tbgenter($bb6);
+@include tbgenter($bb7);
+@include tbgenter($bb8);
+@include tbgenter($bb9);

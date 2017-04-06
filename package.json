@@ -39,6 +39,7 @@
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
     "koa": "2.0.0",
-    "koa-router": "7.0.0"
+    "koa-router": "7.0.0",
+    "require": "^2.4.20"
   }
 }

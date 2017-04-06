@@ -41,13 +41,9 @@ gulp.task('styles', function () {
 			browsers: [
 
 				'last 2 version',
-				'safari 5',
-				'ie 8',
-				'ie 9',
-				'opera 12.1',
-				'ios 6',
-				'android 4',
-				'Android >= 4.0'
+
+				'ios 7',
+				'>1%'
 
 			],
 			cascade: true
@@ -93,11 +89,11 @@ gulp.task('cleanwap', function () {
 gulp.task('wapcss', () => {
 	return gulp.src('src/wap/css/*.css')
 		.pipe(autoprefixer({
-		browsers: ['last 2 versions', '> 1%','iOS 7'],
-            cascade: true, //是否美化属性值 默认：true 像这样：
-            //-webkit-transform: rotate(45deg);
-            //        transform: rotate(45deg);
-           
+			browsers: ['last 2 versions', '> 1%', 'iOS 7'],
+			cascade: true, //是否美化属性值 默认：true 像这样：
+			//-webkit-transform: rotate(45deg);
+			//        transform: rotate(45deg);
+
 		}))
 		.pipe(gulp.dest('dist/wap/css'))
 		.pipe(minifycss())
@@ -137,18 +133,28 @@ gulp.task('wapjs', function () {
 		.pipe(gulp.dest('dist/wap/js'))
 		.pipe(notify({ message: 'wap的js压缩完毕' }));
 });
+gulp.task('wapscss', () => {
+	return gulp.src('src/wap/scss/*.scss')
+		.pipe(sass())
+		.pipe(gulp.dest('src/wap/css'))
+		.pipe(notify({ message: 'wap scss finish' }))
+})
 gulp.task('wapimages', function () {
 	return gulp.src('src/wap/images/**/*')
 		.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
 		.pipe(gulp.dest('dist/wap/images'))
 		.pipe(notify({ message: 'wap的图片压缩完毕' }));
 });
-
-gulp.task('wap', ['cleanwap'], () => {
-	gulp.start('wapcss', 'wapJs', 'wapimages','wapcommon','wapjs')
+gulp.task('copy', () => {
+	return gulp.src('src/wap/*.html')
+		.pipe(gulp.dest('dist/wap'))
 })
+gulp.task('wap', ['cleanwap'], () => {
+	gulp.start('wapcss', 'wapJs', 'wapimages', 'wapcommon', 'wapjs', 'copy')
+})
+
 // 预设任务
-gulp.task('default', ['clean', 'scss'], function () {
+gulp.task('default', ['clean', 'scss', 'wapscss'], function () {
 	gulp.start('styles', 'scripts', 'common', 'wap');
 });
 
@@ -159,12 +165,13 @@ gulp.task('watch', function () {
 	gulp.watch('src/scss/*.scss', ['scss'])
 	gulp.watch('src/newcss/*.css', ['styles']);
 	gulp.watch('src/wap/css/*.css', ['wapcss']);
+	gulp.watch('src/wap/scss/*.scss', ['wapscss']);
 	gulp.watch('src/wap/js/*.js', ['wapjs']);
 	gulp.watch('src/wap/common/*.html', ['wapcommon']);
 	// 看守所有.js档
 	gulp.watch('src/newjs/*.js', ['scripts']);
 
-
+	gulp.watch('src/wap/*.html', ['copy']);
 
 
 	// 看守所有图片档

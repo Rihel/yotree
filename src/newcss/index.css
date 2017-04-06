@@ -133,15 +133,13 @@
 .main .uigt {
   height: 640px;
   background-color: #dacbff;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 50px; }
   .main .uigt .container {
-    height: 640px;
     padding: 20px 0;
     background-color: #dacbff;
-    background-image: url("../img/uigt.png");
     background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed; }
+    background-position: center center; }
 
 .main .hezhao {
   text-align: center;

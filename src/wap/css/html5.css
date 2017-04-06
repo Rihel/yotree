@@ -1,3 +1,10 @@
+.title {
+    font-size: 22px!important;
+    color: #ff5a0c!important;
+    font-weight: bold;
+    margin-bottom: 1rem!important;
+}
+
 .caption {
     text-align: center;
     box-sizing: border-box;
@@ -155,10 +162,6 @@
     margin-top: 0.5rem;
 }
 
-.two {
-    background-color: #f9f9f9;
-}
-
 .two-inner {
     width: 100%;
     margin: 0 auto;
@@ -173,35 +176,13 @@
     height: 2rem;
     line-height: 2rem;
     width: 13rem;
-    font-size: 1rem;
+    font-size: 22px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: 600;
-    color: #5385da;
-}
-
-.two-l h2:before {
-    content: "";
-    width: 10px;
-    height: 0.75rem;
-    display: block;
-    position: absolute;
-    top: 0.65rem;
-    left: -8px;
-    background-color: #f9f9f9;
-}
-
-.two-l h2:after {
-    content: "";
-    width: 10px;
-    height: 0.75rem;
-    display: block;
-    position: absolute;
-    top: 0.65rem;
-    right: -8px;
-    background-color: #f9f9f9;
+    color: #fd5b0a;
 }
 
 .two-l ul {
@@ -219,10 +200,6 @@
     width: 100%;
 }
 
-.two-l ul li img:hover {
-    transform: translate(0px, -6px);
-}
-
 .two-l p {
     font-size: 0.5rem;
     color: #666;
@@ -234,7 +211,7 @@
 }
 
 .two-r h3 {
-    font-size: 1.2rem;
+    font-size: 22px;
     color: #fe3f08;
     margin-top: 1rem;
     font-weight: 800;
@@ -249,6 +226,15 @@
     color: #666;
     padding-top: 0.5rem;
     padding-bottom: 0.2rem;
+}
+
+.two-r .text {
+    font-size: 0.5rem;
+}
+
+.two-r .text span {
+    font-size: 0.6rem;
+    color: #fd5b0a;
 }
 
 .class-zj {
@@ -335,14 +321,13 @@
 }
 
 .google {
-    background: #0d182c;
     padding-bottom: 1rem;
 }
 
 .google h2 {
     color: #fd5b0a;
     text-align: center;
-    padding-top: .5rem;
+    padding-top: 2.5rem;
 }
 
 .google p {
@@ -401,6 +386,8 @@
 .google .google-list li {
     overflow: hidden;
     clear: both;
+    position: relative;
+    height: 3rem;
 }
 
 .google .google-list li img {
@@ -408,47 +395,64 @@
     display: block;
     width: 20%;
     height: auto;
+    position: absolute;
 }
 
 .google .google-list li .text {
     float: left;
     display: block;
-    width: 75%;
-    height: auto;
-    color: #fff;
+    width: 80%;
+    height: 2rem;
+    color: #000;
     font-size: 0.5rem;
     box-sizing: border-box;
     padding: .1rem .3rem;
     border-radius: .2rem;
     margin-top: 0.5rem;
+    line-height: .8rem;
+    position: absolute;
+    z-index: -1;
+    /*border: 2px solid #ff510a;*/
+}
+
+.google .google-list li:nth-of-type(2n-1) img {
+    left: 5%;
+}
+
+.google .google-list li:nth-of-type(2n) img {
+    right: 0;
 }
 
 .google .google-list li:nth-of-type(2n-1) .text {
-    margin-left: 0.5rem;
+    margin-left: -0.5rem;
+    right: 0;
+    padding-left: 1.5rem;
 }
 
 .google .google-list li:nth-of-type(2n) .text {
-    margin-right: 0.5rem;
+    margin-right: -0.5rem;
+    left: 5%;
+    padding-right: 1.5rem;
 }
 
 .google .google-list li:nth-of-type(1) .text {
-    border: 1px solid #e25448;
+    background: #f3c015;
 }
 
 .google .google-list li:nth-of-type(2) .text {
-    border: 1px solid #f9e262;
+    background: #dd6d0b;
 }
 
 .google .google-list li:nth-of-type(3) .text {
-    border: 1px solid #24a4cb;
+    background: #ed6942;
 }
 
 .google .google-list li:nth-of-type(4) .text {
-    border: 1px solid #cc3335;
+    background: #07c0dc
 }
 
 .google .google-list li:nth-of-type(5) .text {
-    border: 1px solid #f9e262;
+    background: #00d390;
 }
 
 .student-zuoping {
@@ -908,71 +912,4 @@
     float: left;
     border-bottom: 1px #fff solid;
     padding-left: 0.2rem;
-}
-
-#dibu {
-    background-color: #333;
-    width: 100%;
-    padding: 0.1rem 0rem;
-    margin-bottom: 2.3rem;
-    text-align: center;
-}
-
-#dibu a {
-    color: #999;
-}
-
-#dibu p {
-    font-size: 0.6rem;
-    line-height: 20px;
-    color: #999;
-}
-
-.footer-inner p a {
-    color: #999;
-}
-
-#footer {
-    background-color: #04324c;
-    height: 2.3rem;
-    width: 100%;
-    left: 0;
-    position: fixed;
-    bottom: 0;
-    border-bottom: 1px #f8f8f8 solid;
-    border-top: 1px #e7e7e7;
-}
-
-.footer-inner {
-    width: 100%;
-    padding-top: 0.05rem;
-    height: 2.3rem;
-    margin: 0 auto;
-}
-
-.footer-dianhua {
-    width: 25%;
-    text-align: center;
-    float: left;
-}
-
-.footer-inner i {
-    font-size: 0.8rem;
-    color: #fefefe;
-    display: block;
-    padding-top: 0.3rem;
-    padding-bottom: 4px;
-}
-
-.footer-inner a {
-    font-size: 0.6rem;
-    padding-top: -0.325rem;
-    color: #fefefe;
-    display: block;
-}
-
-.footer-inner p {
-    font-size: 0.6rem;
-    padding-top: -0.06rem;
-    color: #fefefe;
 }
