@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <!–[if lte IE 8]>
     <meta http-equiv=”x-ua-compatible” content=”ie=7″/>
     <![endif]–>
@@ -785,7 +786,7 @@
             </tr>
             <tr>
                 <td>BOM</td>
-                <td>4</td>
+                <td>1</td>
                 <td>浏览器对象模型BOM - Browser Object Model、 <br>
                     常用方法：open、close， <br>
                     常用属性： 用户代理信息navigator.userAgent、 <br>
@@ -815,7 +816,7 @@
             </tr>
             <tr>
                 <td>正则表达式</td>
-                <td>4</td>
+                <td>2</td>
                 <td>RegExp对象、方法：test、search、match、replace，
                     修饰符：i（ignore）、g（global），
                     量词：＋、＊、？，子项：()，<br>
@@ -830,7 +831,7 @@
             </tr>
             <tr>
                 <td>面向对象基础</td>
-                <td>4</td>
+                <td>2</td>
                 <td>对象的组成：成员属性、成员方法，Object，{}，<br>
                     对象创建和初始化，工厂模式，构造函数，书写规范，<br>
                     运算符new的执行过程和原理分析，<br>
@@ -841,7 +842,7 @@
             </tr>
             <tr>
                 <td>高级面向对象</td>
-                <td>4</td>
+                <td>2</td>
                 <td>包装对象：String、Number、Boolean，toString()， <br>
                     toString()的重写(overWrite)和实现过程， <br>
                     hasOwnProperty()方法实现自有属性判断， <br>
@@ -1403,7 +1404,12 @@
         tbody.each(function(index,item){
 
            $(item).html(parseInt($(item).html())*4);
-        })
+        });
+        // var b=0;
+        // $('.kecheng table:nth-of-type(3) tbody tr td:nth-of-type(2)').each(function(index,item){
+        //    b+= parseInt($(item).html())
+        // });
+        // console.log(b,b/4);
     })
 </script>
 </body>
